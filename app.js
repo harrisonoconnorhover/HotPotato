@@ -62,7 +62,7 @@ $('run-route').addEventListener('click', () => {
     if (i >= steps.length) {
       clearInterval(timer);
       setTimeout(() => {
-        $('route-time').textContent = 'DEMO COMPLETE';
+        $('route-time').textContent = 'ROUTED';
         btn.textContent = 'Run route again ⚡';
         btn.disabled = false;
         btn.removeAttribute('aria-busy');

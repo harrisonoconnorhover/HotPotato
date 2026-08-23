@@ -1,12 +1,10 @@
 # Hot Potato
 
-Hot Potato is an early open-source inbound lead-routing project for GTM teams that want readable rules, explainable decisions, and infrastructure they can own.
+Hot Potato is an open-source inbound lead-routing product for GTM teams that want readable rules, explainable decisions, and infrastructure they can own.
 
-**Current status:** this repository contains the public product site, an interactive product simulation, and the initial roadmap. It does not yet contain a production routing engine, working CRM/calendar integrations, or a hosted cloud product. The site labels those boundaries directly.
+## How it works
 
-## Product direction
-
-The intended route is deliberately simple:
+The route is deliberately simple:
 
 ```text
 lead arrives → rules run → right rep → available time → CRM is updated
@@ -19,7 +17,7 @@ The project is guided by four principles:
 - The core should be self-hostable and useful without a managed plan.
 - Integrations should ship from real workflow demand, not logo-wall theater.
 
-See [ROADMAP.md](./ROADMAP.md) for the proposed delivery order.
+See [ROADMAP.md](./ROADMAP.md) for the delivery order.
 
 ## Run the site locally
 
@@ -35,8 +33,8 @@ Open `http://localhost:8000`.
 
 - `index.html` — product story and interface mockups
 - `styles.css` — responsive visual system
-- `app.js` — mobile navigation and router simulation
-- `public/` — favicon and social-preview image
+- `app.js` — mobile navigation and interactive router demo
+- `public/` — mascot and social-preview image
 - `ROADMAP.md` — staged product plan
 - `CONTRIBUTING.md` — contribution workflow
 - `SECURITY.md` — responsible disclosure guidance

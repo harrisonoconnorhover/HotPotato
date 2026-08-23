@@ -2,7 +2,7 @@
 
 ## Supported versions
 
-Hot Potato does not yet have a production routing-engine release. The current repository is a static product site, and only the latest commit on `main` is maintained.
+Security fixes are applied to the latest commit on `main`.
 
 ## Reporting a vulnerability
 

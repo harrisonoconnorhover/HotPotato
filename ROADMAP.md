@@ -1,10 +1,10 @@
 # Hot Potato roadmap
 
-This roadmap is product direction, not a promise of availability or timing. Each phase should leave one small, useful vertical slice working before the next begins.
+This roadmap keeps each release focused on one complete, useful vertical slice.
 
-## 0. Public foundation — current
+## 0. Public foundation — shipped
 
-- Publish the product thesis, interactive simulation, and honest release status.
+- Publish the product thesis, interactive router, and product UI.
 - Establish the public repository, contribution path, security policy, and license.
 - Collect real inbound-routing workflows through GitHub Discussions.
 
@@ -28,10 +28,10 @@ This roadmap is product direction, not a promise of availability or timing. Each
 - Support safe retries, capacity rules, and meeting creation.
 - Add operator-facing route search and rule-version history.
 
-## 4. Managed option
+## 4. Managed Hot Potato Cloud
 
-- Validate whether teams want hosted operation before defining packaging.
-- Publish pricing only after the managed product and support boundary exist.
+- Managed hosting, upgrades, backups, and monitoring.
+- Team permissions, enterprise controls, and direct support.
 
 ## Not planned yet
 
