@@ -7,6 +7,7 @@
 - Connected every public action to the real repository, roadmap, contribution, discussion, issue, license, or security destination.
 - Added keyboard-friendly navigation, reduced-motion behavior, an honest router state, and working clone-command copy feedback.
 - Added the social card, project brief, roadmap, contribution guide, security policy, license, and decision record.
+- Published the public GitHub repository and HTTPS GitHub Pages site with Discussions, Issues, and private vulnerability reporting enabled.
 
 ## Try It
 
@@ -15,7 +16,11 @@
 
 ## Checks
 
-- Pending final validation and live publication checks.
+- `node --check app.js` — passed.
+- HTML/link contract — passed with 39 unique IDs, 40 references, and 31 JavaScript ID bindings.
+- Local static server — returned HTTP 200 with `text/html`.
+- GitHub Pages latest `main` build — built successfully; live HTTPS returned HTTP 200.
+- Published social card — exact checksum matched the validated local 1200×630 PNG.
 
 ## Decisions
 
