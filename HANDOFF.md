@@ -6,8 +6,7 @@
 - Reframed unsupported product, integration, performance, pricing, and open-source claims as simulations or roadmap direction.
 - Connected every public action to the real repository, roadmap, contribution, discussion, issue, license, or security destination.
 - Added keyboard-friendly navigation, reduced-motion behavior, an honest router state, and working clone-command copy feedback.
-- Added the social card, project brief, roadmap, contribution guide, security policy, license, and decision record.
-- Published the public GitHub repository and HTTPS GitHub Pages site with Discussions, Issues, and private vulnerability reporting enabled.
+- Added the social card and project docs, then published the public repository and HTTPS site with Discussions, Issues, and private vulnerability reporting enabled.
 
 ## Try It
 
