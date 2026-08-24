@@ -67,7 +67,7 @@
       </div>
     </section>
 
-    <section class="logo-strip" id="integrations">
+    <section class="logo-strip">
       <div class="container logo-strip-inner">
         <span class="strip-label">PLAYS NICELY WITH</span>
         <span class="integration-name">HubSpot</span><span class="integration-name">Salesforce</span><span class="integration-name">Google Calendar</span><span class="integration-name">Microsoft 365</span><span class="integration-name">Slack</span><span class="integration-name">Zoom</span>
@@ -101,17 +101,17 @@
           <section class="logic-panel">
             <div class="logic-head"><div class="panel-label">ROUTING LOG</div><span id="route-time">READY</span></div>
             <div class="steps" id="steps">
-              <div class="rule-step active"><span class="step-check">✓</span><div><strong id="rule-size">Company size ≥ 500</strong><small id="rule-pool">Enterprise pool</small></div></div>
-              <div class="rule-step active"><span class="step-check">✓</span><div><strong id="rule-region">Region = Northeast</strong><small id="rule-territory">East territory</small></div></div>
-              <div class="rule-step active"><span class="step-check">✓</span><div><strong>Existing account owner</strong><small>No match</small></div></div>
-              <div class="rule-step active"><span class="step-check">✓</span><div><strong>Weighted round robin</strong><small id="rule-owner">Jamie R.</small></div></div>
-              <div class="rule-step active"><span class="step-check">✓</span><div><strong>Calendar availability</strong><small id="rule-calendar">3:30 PM open</small></div></div>
+              <div class="rule-step"><span class="step-check">1</span><div><strong id="rule-size">Company size ≥ 500</strong><small id="rule-pool">Enterprise pool</small></div></div>
+              <div class="rule-step"><span class="step-check">2</span><div><strong id="rule-region">Region = Northeast</strong><small id="rule-territory">East territory</small></div></div>
+              <div class="rule-step"><span class="step-check">3</span><div><strong>Existing account owner</strong><small>No match</small></div></div>
+              <div class="rule-step"><span class="step-check">4</span><div><strong>Weighted round robin</strong><small id="rule-owner">Jamie R.</small></div></div>
+              <div class="rule-step"><span class="step-check">5</span><div><strong>Calendar availability</strong><small id="rule-calendar">3:30 PM open</small></div></div>
             </div>
           </section>
           <section class="result-panel">
             <div class="panel-label">RESULT</div>
-            <div class="route-result shown" id="route-result"><div class="result-icon">↗</div><small>ROUTED TO</small><h3 id="result-owner">Jamie R.</h3><p id="result-team">Enterprise East</p></div>
-            <div class="meeting-card shown" id="meeting-card"><span class="green-check">✓</span><div><strong>Meeting ready</strong><span id="result-calendar">Today · 3:30 PM</span></div></div>
+            <div class="route-result" id="route-result"><div class="result-icon">↗</div><small>ROUTED TO</small><h3 id="result-owner">Jamie R.</h3><p id="result-team">Enterprise East</p></div>
+            <div class="meeting-card" id="meeting-card"><span class="green-check">✓</span><div><strong>Meeting ready</strong><span id="result-calendar">Today · 3:30 PM</span></div></div>
             <button class="button button-fire full" id="run-route" type="button">Run route ⚡</button>
           </section>
         </div>
@@ -160,20 +160,20 @@
         <article class="feature-card feature-large"><span class="feature-icon">↗</span><span class="feature-number">01</span><h3>Route by anything</h3><p>CRM ownership, territories, form answers, firmographics, account tiers, rep capacity, custom fields, or your own API response.</p><div class="mini-tags"><span>CRM owner</span><span>Territory</span><span>Company size</span><span>Availability</span></div></article>
         <article class="feature-card"><span class="feature-icon">◷</span><span class="feature-number">02</span><h3>Book immediately</h3><p>Show the right rep's availability while the buyer is still on your site.</p><div class="calendar-mini"><span>9:30</span><span>10:00</span><b>10:30</b><span>11:30</span></div></article>
         <article class="feature-card"><span class="feature-icon">DB</span><span class="feature-number">03</span><h3>Write it back</h3><p>Update your CRM with ownership, meeting details, route metadata, and the reason behind the decision.</p><div class="sync-mini"><span>Hot Potato</span><b>→</b><strong>HubSpot</strong></div></article>
-        <article class="feature-card feature-wide"><span class="feature-icon">◈</span><span class="feature-number">04</span><h3>Know exactly what happened</h3><p>Searchable route logs turn “why did this lead go there?” from a Slack archaeology project into a ten-second answer.</p><div class="log-mini"><span>18:04:11</span><strong>Maya Chen → Jamie R.</strong><em>5 rules passed</em><span>18:03:54</span><strong>Andre Mills → Morgan T.</strong><em>4 rules passed</em><span>18:03:21</span><strong>Priya Rao → Alex K.</strong><em>5 rules passed</em></div></article>
+        <article class="feature-card feature-accent"><span class="feature-icon">◈</span><span class="feature-number">04</span><h3>Know exactly what happened</h3><p>Searchable route logs turn “why did this lead go there?” from a Slack archaeology project into a ten-second answer.</p><div class="log-mini"><span>18:04:11</span><strong>Maya Chen → Jamie R.</strong><em>5 rules passed</em><span>18:03:54</span><strong>Andre Mills → Morgan T.</strong><em>4 rules passed</em><span>18:03:21</span><strong>Priya Rao → Alex K.</strong><em>5 rules passed</em></div></article>
       </div>
     </section>
 
-    <section class="integrations-section">
+    <section class="integrations-section" id="integrations">
       <div class="container integration-layout">
-        <div><div class="section-kicker">04 / INTEGRATIONS</div><h2>Already knows<br>your stack.</h2><p>Hot Potato reads the data you already trust and writes the route back where your team already works.</p><a class="button button-dark" href="#open">Explore integrations →</a></div>
+        <div><div class="section-kicker">04 / INTEGRATIONS</div><h2>Already knows<br>your stack.</h2><p>Hot Potato reads the data you already trust and writes the route back where your team already works.</p><a class="button button-dark" href="https://github.com/harrisonoconnorhover/HotPotato#readme" target="_blank" rel="noreferrer">Read the docs ↗</a></div>
         <div class="integration-grid">
-          <div class="integration-card"><span>HS</span><div><strong>HubSpot</strong><small>CRM</small></div><b>›</b></div>
-          <div class="integration-card"><span>SF</span><div><strong>Salesforce</strong><small>CRM</small></div><b>›</b></div>
-          <div class="integration-card"><span>GC</span><div><strong>Google Calendar</strong><small>CALENDAR</small></div><b>›</b></div>
-          <div class="integration-card"><span>M3</span><div><strong>Microsoft 365</strong><small>CALENDAR</small></div><b>›</b></div>
-          <div class="integration-card"><span>SL</span><div><strong>Slack</strong><small>NOTIFICATIONS</small></div><b>›</b></div>
-          <div class="integration-card"><span>ZM</span><div><strong>Zoom</strong><small>MEETINGS</small></div><b>›</b></div>
+          <div class="integration-card"><span>HS</span><div><strong>HubSpot</strong><small>CRM</small></div></div>
+          <div class="integration-card"><span>SF</span><div><strong>Salesforce</strong><small>CRM</small></div></div>
+          <div class="integration-card"><span>GC</span><div><strong>Google Calendar</strong><small>CALENDAR</small></div></div>
+          <div class="integration-card"><span>M3</span><div><strong>Microsoft 365</strong><small>CALENDAR</small></div></div>
+          <div class="integration-card"><span>SL</span><div><strong>Slack</strong><small>NOTIFICATIONS</small></div></div>
+          <div class="integration-card"><span>ZM</span><div><strong>Zoom</strong><small>MEETINGS</small></div></div>
         </div>
       </div>
     </section>
