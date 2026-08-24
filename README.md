@@ -2,6 +2,8 @@
 
 Hot Potato is an open-source inbound lead-routing product for GTM teams that want readable rules, explainable decisions, and infrastructure they can own.
 
+**Live site:** [hot-potato-32c.pages.dev](https://hot-potato-32c.pages.dev/)
+
 ## How it works
 
 The route is deliberately simple:
@@ -28,6 +30,14 @@ python3 -m http.server 8000
 ```
 
 Open `http://localhost:8000`.
+
+## Deploy
+
+The production site is hosted on Cloudflare Pages. It is a static deployment with no install or build command.
+
+```bash
+wrangler pages deploy . --project-name hot-potato --branch main
+```
 
 ## Repository map
 

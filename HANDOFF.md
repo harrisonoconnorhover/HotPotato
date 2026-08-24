@@ -2,30 +2,29 @@
 
 ## Finished
 
-- Replaced the cookie-like CSS potato with an ImageGen mascot built around an oblong, lumpy silhouette, visible potato eyes, hand-inked texture, and a restrained flame.
-- Reused the mascot across the navigation, hero, favicon, repository card, final call-to-action, and footer.
-- Refreshed the 1200×630 social card around the new mascot and existing cream, ink, orange, and acid-green brand system.
-- Removed early-build, simulation, disclaimer, and tentative-roadmap language from the site and public project docs.
-- Restored confident product, integration, pricing, open-source, and live-router positioning without reintroducing placeholder links.
+- Created the `hot-potato` Cloudflare Pages project.
+- Published the static Hot Potato site at `https://hot-potato-32c.pages.dev/`.
+- Pointed canonical, Open Graph, and X/Twitter preview metadata at the Cloudflare URL.
+- Documented the public URL and direct Cloudflare Pages deployment command.
 
 ## Try It
 
-- Run `python3 -m http.server 8000`, then open `http://localhost:8000`.
-- Review the mascot at hero, navigation, and favicon sizes; run several routes and load all three sample leads.
+- Open `https://hot-potato-32c.pages.dev/`.
+- Run several routes, load all three sample leads, and check the page on desktop and mobile.
 
 ## Checks
 
 - `node --check app.js` — passed.
-- HTML/link contract — passed with 39 unique IDs, 45 references, 31 JavaScript bindings, and five images.
-- Local static server — returned HTTP 200 with `text/html`.
-- Mascot — validated at 800×1200 with a real alpha channel.
-- Social card — validated at 1200×630.
+- Static asset contract — passed.
+- Cloudflare production deployment — succeeded.
+- Live home page, stylesheet, script, mascot, and social card — returned HTTP 200.
+- Live metadata and removal of early-build/simulation language — verified.
 
 ## Decisions
 
-- Use one generated mascot asset across the brand instead of maintaining separate CSS potato drawings.
-- Keep the character hand-inked and slightly imperfect rather than glossy, photorealistic, or overly cute.
-- Present one cohesive product story; keep planning language in the repository roadmap rather than the marketing page.
+- Use Cloudflare Pages as the primary public host while GitHub remains the source of truth.
+- Keep the dependency-free static deployment; no build command is needed.
+- Keep GitHub Pages as a secondary preview until an official domain is selected.
 
 ## Remaining
 
@@ -34,6 +33,6 @@
 
 ## Review First
 
-- New mascot scale and positioning in the hero and navigation.
+- Cloudflare production page and social-preview metadata.
+- Interactive router behavior on desktop and mobile.
 - Product claims across integrations, pricing, and the open-source section.
-- Refreshed social card and GitHub preview metadata.
