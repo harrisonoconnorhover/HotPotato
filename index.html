@@ -24,7 +24,7 @@
   <link rel="stylesheet" href="./styles.css" />
 </head>
 <body id="top">
-  <div class="announcement"><span>OPEN SOURCE</span> Lead routing without flowchart hell. <a href="https://github.com/harrisonoconnorhover/HotPotato" target="_blank" rel="noreferrer">Read the code →</a></div>
+  <div class="announcement"><span>OPEN SOURCE</span> Lead routing without flowchart hell. <a href="https://github.com/harrisonoconnorhover/hot-potato" target="_blank" rel="noopener noreferrer">Read the code →</a></div>
   <header class="nav-wrap">
     <nav class="nav container">
       <a class="brand" href="#top" aria-label="Hot Potato home">
@@ -34,13 +34,12 @@
       <div class="nav-links" id="nav-links">
         <a href="#product">Product</a>
         <a href="#how">How it works</a>
-        <a href="#integrations">Integrations</a>
-        <a href="#pricing">Pricing</a>
+        <a href="#status">Project status</a>
         <a href="#open">Docs</a>
       </div>
       <div class="nav-actions">
-        <a class="text-link desktop" href="https://github.com/harrisonoconnorhover/HotPotato" target="_blank" rel="noreferrer">⌘ GitHub</a>
-        <a class="button button-dark button-small desktop" href="#demo">Try the demo ↗</a>
+        <a class="text-link desktop" href="https://github.com/harrisonoconnorhover/hot-potato" target="_blank" rel="noopener noreferrer">⌘ GitHub</a>
+        <a class="button button-dark button-small desktop" href="#demo">Explore the example ↗</a>
         <button class="menu-button" id="menu-button" type="button" aria-label="Open menu" aria-controls="nav-links" aria-expanded="false">☰</button>
       </div>
     </nav>
@@ -49,70 +48,64 @@
   <main>
     <section class="hero container">
       <div class="hero-copy">
-        <div class="eyebrow"><span class="status-dot"></span> BUILT FOR GTM TEAMS WHO MOVE FAST</div>
+        <div class="eyebrow"><span class="status-dot"></span> OPEN-SOURCE PROJECT · IN DEVELOPMENT</div>
         <h1>Stop making<br><span>hot leads wait.</span></h1>
-        <p>Qualify, route, and book every inbound buyer with the right rep, instantly. Powerful routing rules, readable by actual humans.</p>
+        <p>Route inbound leads with readable rules, weighted rep assignment, and explainable decisions. An open-source application in active development.</p>
         <div class="hero-actions">
-          <a class="button button-fire" href="#demo">Try the live router →</a>
-          <a class="button button-ghost" href="https://github.com/harrisonoconnorhover/HotPotato" target="_blank" rel="noreferrer">⌘ View on GitHub</a>
+          <a class="button button-fire" href="#demo">Explore the example →</a>
+          <a class="button button-ghost" href="https://github.com/harrisonoconnorhover/hot-potato" target="_blank" rel="noopener noreferrer">⌘ View on GitHub</a>
         </div>
-        <div class="micro-proof">◈ Open-source core · Self-hostable · Every route explained</div>
+        <div class="micro-proof">◈ Open source · Run it yourself · Inspect the decisions</div>
       </div>
       <div class="hero-art">
         <div class="orbit orbit-one" aria-hidden="true"></div><div class="orbit orbit-two" aria-hidden="true"></div>
         <div class="hero-mascot-wrap"><img class="hero-mascot" src="./public/hot-potato-mascot-v2.png" alt="Hot Potato mascot: a flaming potato" /></div>
-        <div class="floating-card card-a" aria-hidden="true"><span class="tiny-icon">DB</span><div><small>CRM MATCH</small><strong>Acme Corp</strong></div><b>✓</b></div>
-        <div class="floating-card card-b" aria-hidden="true"><span class="tiny-icon">◷</span><div><small>REP FOUND</small><strong>3:30 PM</strong></div><b>✓</b></div>
-        <div class="floating-card card-c" aria-hidden="true"><span class="tiny-icon">↗</span><div><small>ROUTE COMPLETE</small><strong>Jamie R.</strong></div><b>⚡</b></div>
-      </div>
-    </section>
-
-    <section class="logo-strip">
-      <div class="container logo-strip-inner">
-        <span class="strip-label">PLAYS NICELY WITH</span>
-        <span class="integration-name">HubSpot</span><span class="integration-name">Salesforce</span><span class="integration-name">Google Calendar</span><span class="integration-name">Microsoft 365</span><span class="integration-name">Slack</span><span class="integration-name">Zoom</span>
+        <div class="floating-card card-a" aria-hidden="true"><span class="tiny-icon">DB</span><div><small>EXAMPLE ACCOUNT</small><strong>Acme Corp</strong></div><b>✓</b></div>
+        <div class="floating-card card-b" aria-hidden="true"><span class="tiny-icon">◷</span><div><small>EXAMPLE TIME</small><strong>3:30 PM</strong></div><b>✓</b></div>
+        <div class="floating-card card-c" aria-hidden="true"><span class="tiny-icon">↗</span><div><small>EXAMPLE REP</small><strong>Jamie R.</strong></div><b>⚡</b></div>
       </div>
     </section>
 
     <section class="product-section container" id="product">
       <div class="section-kicker">01 / THE PRODUCT</div>
       <div class="section-heading split-heading">
-        <h2>One route from<br>form fill to booked.</h2>
-        <div><p>Hot Potato handles the messy middle between “someone filled out the form” and “the right rep has a meeting.”</p><a class="inline-link" href="#how">See the full route →</a></div>
+        <h2>See an example<br>lead assignment.</h2>
+        <div><p>This walkthrough illustrates how company size, territory, and rep selection can shape an assignment.</p><a class="inline-link" href="#how">Read the rule sketch →</a></div>
       </div>
 
       <div class="router-shell" id="demo">
         <div class="router-topbar">
           <div class="window-dots"><span></span><span></span><span></span></div>
-          <div class="router-title">🔥 Live router</div>
-          <div class="live-pill"><span></span> LIVE</div>
+          <div class="router-title">🔥 Routing example</div>
+          <div class="demo-label">SIMULATED</div>
         </div>
+        <p class="demo-note">Preset fictional leads and results. No CRM is connected, no calendar is checked, and no meeting is booked by this example.</p>
         <div class="router-grid">
           <section class="lead-panel">
-            <div class="panel-label">INCOMING LEAD</div>
+            <div class="panel-label">EXAMPLE LEAD</div>
             <div class="lead-card"><div class="avatar" id="lead-avatar">MC</div><div><strong id="lead-name">Maya Chen</strong><span id="lead-role">VP, Revenue · Northstar Labs</span></div></div>
             <dl class="lead-details">
               <div><dt>Employees</dt><dd id="lead-employees">820</dd></div>
               <div><dt>Region</dt><dd id="lead-region">Northeast</dd></div>
               <div><dt>Source</dt><dd id="lead-source">Demo request</dd></div>
             </dl>
-            <button class="shuffle-link" id="next-lead" type="button">Load another lead →</button>
+            <button class="shuffle-link" id="next-lead" type="button">Load another example →</button>
           </section>
           <section class="logic-panel">
-            <div class="logic-head"><div class="panel-label">ROUTING LOG</div><span id="route-time">READY</span></div>
+            <div class="logic-head"><div class="panel-label">EXAMPLE STEPS</div><span id="route-time">READY</span></div>
             <div class="steps" id="steps">
               <div class="rule-step"><span class="step-check">1</span><div><strong id="rule-size">Company size ≥ 500</strong><small id="rule-pool">Enterprise pool</small></div></div>
               <div class="rule-step"><span class="step-check">2</span><div><strong id="rule-region">Region = Northeast</strong><small id="rule-territory">East territory</small></div></div>
               <div class="rule-step"><span class="step-check">3</span><div><strong>Existing account owner</strong><small>No match</small></div></div>
               <div class="rule-step"><span class="step-check">4</span><div><strong>Weighted round robin</strong><small id="rule-owner">Jamie R.</small></div></div>
-              <div class="rule-step"><span class="step-check">5</span><div><strong>Calendar availability</strong><small id="rule-calendar">3:30 PM open</small></div></div>
+              <div class="rule-step"><span class="step-check">5</span><div><strong>Illustrative availability</strong><small id="rule-calendar">3:30 PM open</small></div></div>
             </div>
           </section>
           <section class="result-panel">
             <div class="panel-label">RESULT</div>
-            <div class="route-result" id="route-result"><div class="result-icon">↗</div><small>ROUTED TO</small><h3 id="result-owner">Jamie R.</h3><p id="result-team">Enterprise East</p></div>
-            <div class="meeting-card" id="meeting-card"><span class="green-check">✓</span><div><strong>Meeting ready</strong><span id="result-calendar">Today · 3:30 PM</span></div></div>
-            <button class="button button-fire full" id="run-route" type="button">Run route ⚡</button>
+            <div class="route-result" id="route-result"><div class="result-icon">↗</div><small>EXAMPLE ASSIGNMENT</small><h3 id="result-owner">Jamie R.</h3><p id="result-team">Enterprise East</p></div>
+            <div class="meeting-card" id="meeting-card"><span class="green-check">✓</span><div><strong>Example time</strong><span id="result-calendar">Today · 3:30 PM</span></div></div>
+            <button class="button button-fire full" id="run-route" type="button">Play example ⚡</button>
           </section>
         </div>
       </div>
@@ -123,11 +116,11 @@
         <div class="section-kicker light">02 / HOW IT WORKS</div>
         <div class="section-heading split-heading light">
           <h2>Routing logic<br>you can actually read.</h2>
-          <p>Build rules around CRM ownership, territory, company data, rep availability, or whatever your GTM motion requires. Then see exactly why every lead went where it did.</p>
+          <p>The application supports conditional rules, existing-owner preference, and weighted assignment. This sketch illustrates the idea; the repository documents the actual rule format.</p>
         </div>
         <div class="code-grid">
           <div class="code-card">
-            <div class="code-head"><span>⌘ route.js</span><span class="code-status"><i></i> ACTIVE</span></div>
+            <div class="code-head"><span>⌘ Rule sketch</span><span class="code-status">PSEUDOCODE</span></div>
             <pre><code><span class="c-muted">// enterprise inbound</span>
 <span class="c-purple">when</span>(lead.employees &gt;= <span class="c-yellow">500</span>)
   .territory(lead.region)
@@ -135,10 +128,10 @@
   .fallback(<span class="c-green">"weighted_round_robin"</span>)
   .require(<span class="c-green">"calendar_available"</span>)
   .route();</code></pre>
-            <div class="code-foot">▣ Versioned rules · Searchable decision history</div>
+            <div class="code-foot">Illustrative pseudocode · see the application for its rule format</div>
           </div>
           <div class="explain-card">
-            <div class="explain-top">✦ <span>ROUTE EXPLAINER</span></div>
+            <div class="explain-top">✦ <span>EXAMPLE EXPLANATION</span></div>
             <h3 id="explain-title">Why did Maya go to Jamie?</h3>
             <div class="explain-list">
               <div><span>✓</span> <span><b id="explain-company">Northstar Labs</b> matched <b id="explain-pool">Enterprise</b></span></div>
@@ -147,63 +140,50 @@
               <div><span>✓</span> <span><b id="explain-owner-priority">Jamie</b> had the highest weighted priority</span></div>
               <div><span>✓</span> <span><b id="explain-owner-calendar">Jamie</b> was available at the requested time</span></div>
             </div>
-            <div class="audit-note">◈ Every routing decision is logged with the rule version that made it.</div>
+            <div class="audit-note">Fictional example. The application stores routing decisions with their rule version.</div>
           </div>
         </div>
       </div>
     </section>
 
     <section class="capabilities container">
-      <div class="section-kicker">03 / THE GOOD STUFF</div>
-      <div class="section-heading split-heading"><h2>Everything the route<br>needs. Nothing it doesn't.</h2><p>Built for the inbound motion you already have, without forcing your team into an enormous workflow builder.</p></div>
+      <div class="section-kicker">03 / IN THE APPLICATION</div>
+      <div class="section-heading split-heading"><h2>Rules, scheduling,<br>and decision history.</h2><p>Inspect the implementation and setup requirements in the repository. The illustrations below use fictional records.</p></div>
       <div class="feature-grid">
-        <article class="feature-card feature-large"><span class="feature-icon">↗</span><span class="feature-number">01</span><h3>Route by anything</h3><p>CRM ownership, territories, form answers, firmographics, account tiers, rep capacity, custom fields, or your own API response.</p><div class="mini-tags"><span>CRM owner</span><span>Territory</span><span>Company size</span><span>Availability</span></div></article>
-        <article class="feature-card"><span class="feature-icon">◷</span><span class="feature-number">02</span><h3>Book immediately</h3><p>Show the right rep's availability while the buyer is still on your site.</p><div class="calendar-mini"><span>9:30</span><span>10:00</span><b>10:30</b><span>11:30</span></div></article>
-        <article class="feature-card"><span class="feature-icon">DB</span><span class="feature-number">03</span><h3>Write it back</h3><p>Update your CRM with ownership, meeting details, route metadata, and the reason behind the decision.</p><div class="sync-mini"><span>Hot Potato</span><b>→</b><strong>HubSpot</strong></div></article>
-        <article class="feature-card feature-accent"><span class="feature-icon">◈</span><span class="feature-number">04</span><h3>Know exactly what happened</h3><p>Searchable route logs turn “why did this lead go there?” from a Slack archaeology project into a ten-second answer.</p><div class="log-mini"><span>18:04:11</span><strong>Maya Chen → Jamie R.</strong><em>5 rules passed</em><span>18:03:54</span><strong>Andre Mills → Morgan T.</strong><em>4 rules passed</em><span>18:03:21</span><strong>Priya Rao → Alex K.</strong><em>5 rules passed</em></div></article>
+        <article class="feature-card feature-large"><span class="feature-icon">↗</span><span class="feature-number">01</span><h3>Define assignment rules</h3><p>Match lead fields to ordered rules, preserve a valid existing owner, and choose an eligible rep using weighted assignment.</p><div class="mini-tags"><span>CRM owner</span><span>Territory</span><span>Company size</span><span>Availability</span></div></article>
+        <article class="feature-card"><span class="feature-icon">◷</span><span class="feature-number">02</span><h3>Configure scheduling</h3><p>Set meeting types, working hours, and booking limits in the application. Calendar actions require configured provider connections.</p><div class="calendar-mini"><span>9:30</span><span>10:00</span><b>10:30</b><span>11:30</span></div></article>
+        <article class="feature-card"><span class="feature-icon">DB</span><span class="feature-number">03</span><h3>Keep the decision</h3><p>Persist the assignment and its rule version. Request IDs let a repeated request reuse its existing result.</p><div class="sync-mini"><span>Hot Potato</span><b>→</b><strong>Decision history</strong></div></article>
+        <article class="feature-card feature-accent"><span class="feature-icon">◈</span><span class="feature-number">04</span><h3>Explain the route</h3><p>Inspect rule and rep traces to understand an assignment. Review saved decisions when a route needs investigation.</p><div class="log-mini"><span>18:04:11</span><strong>Maya Chen → Jamie R.</strong><em>5 rules passed</em><span>18:03:54</span><strong>Andre Mills → Morgan T.</strong><em>4 rules passed</em><span>18:03:21</span><strong>Priya Rao → Alex K.</strong><em>5 rules passed</em></div></article>
       </div>
     </section>
 
-    <section class="integrations-section" id="integrations">
-      <div class="container integration-layout">
-        <div><div class="section-kicker">04 / INTEGRATIONS</div><h2>Already knows<br>your stack.</h2><p>Hot Potato reads the data you already trust and writes the route back where your team already works.</p><a class="button button-dark" href="https://github.com/harrisonoconnorhover/HotPotato#readme" target="_blank" rel="noreferrer">Read the docs ↗</a></div>
-        <div class="integration-grid">
-          <div class="integration-card"><span>HS</span><div><strong>HubSpot</strong><small>CRM</small></div></div>
-          <div class="integration-card"><span>SF</span><div><strong>Salesforce</strong><small>CRM</small></div></div>
-          <div class="integration-card"><span>GC</span><div><strong>Google Calendar</strong><small>CALENDAR</small></div></div>
-          <div class="integration-card"><span>M3</span><div><strong>Microsoft 365</strong><small>CALENDAR</small></div></div>
-          <div class="integration-card"><span>SL</span><div><strong>Slack</strong><small>NOTIFICATIONS</small></div></div>
-          <div class="integration-card"><span>ZM</span><div><strong>Zoom</strong><small>MEETINGS</small></div></div>
+    <section class="status-section" id="status">
+      <div class="container status-layout">
+        <div><div class="section-kicker">04 / PROJECT STATUS</div><h2>Open source.<br>In development.</h2><p>Hot Potato is software you run and configure yourself. This site offers a simulated example and links to the application.</p></div>
+        <div class="status-details">
+          <div><h3>Run it yourself</h3><p>Review the application setup instructions, current capabilities, and development limits before trying it in your own environment.</p></div>
+          <div><h3>Connect your own systems</h3><p>Calendar and CRM actions require provider configuration. Check the application documentation for supported workflows and their requirements.</p></div>
+          <a class="button button-dark" href="https://github.com/harrisonoconnorhover/hot-potato#readme" target="_blank" rel="noopener noreferrer">Read the application docs ↗</a>
         </div>
-      </div>
-    </section>
-
-    <section class="pricing-section container" id="pricing">
-      <div class="section-kicker">05 / PRICING</div>
-      <div class="section-heading split-heading"><h2>Start open.<br>Scale when you want.</h2><p>The core stays open source. Run it yourself, or use Hot Potato Cloud when you don't feel like owning another server.</p></div>
-      <div class="pricing-grid">
-        <div class="price-card"><span class="plan">COMMUNITY</span><h3>$0</h3><p>For builders and small teams running Hot Potato themselves.</p><a class="button button-ghost full" href="https://github.com/harrisonoconnorhover/HotPotato" target="_blank" rel="noreferrer">⌘ Get the repo</a><ul><li>✓ Full routing engine</li><li>✓ Unlimited rules</li><li>✓ Route logs</li><li>✓ Community integrations</li><li>✓ Self-hosted</li></ul></div>
-        <div class="price-card featured"><div class="popular">MOST POPULAR</div><span class="plan">CLOUD</span><h3>$299 <small>/mo</small></h3><p>For GTM teams that want the router without running the router.</p><a class="button button-fire full" href="https://github.com/harrisonoconnorhover/HotPotato/discussions" target="_blank" rel="noreferrer">Start with Hot Potato →</a><ul><li>✓ Everything in Community</li><li>✓ Managed hosting</li><li>✓ Hosted integrations</li><li>✓ Team permissions</li><li>✓ Email support</li></ul></div>
-        <div class="price-card"><span class="plan">BUSINESS</span><h3>Let's talk</h3><p>For larger teams with tighter controls and stranger routing problems.</p><a class="button button-dark full" href="https://github.com/harrisonoconnorhover/HotPotato/discussions" target="_blank" rel="noreferrer">Contact us →</a><ul><li>✓ Everything in Cloud</li><li>✓ SSO / SAML</li><li>✓ Advanced audit controls</li><li>✓ Custom integrations</li><li>✓ Priority support</li></ul></div>
       </div>
     </section>
 
     <section class="open-section" id="open">
       <div class="container open-card">
-        <div class="open-copy"><div class="section-kicker light">OPEN SOURCE BY DEFAULT</div><h2>Trust the router?<br>Read the router.</h2><p>The routing engine lives in the open. Inspect it, extend it, self-host it, or contribute the weird integration your company somehow still depends on.</p><div class="open-actions"><a class="button button-light" href="https://github.com/harrisonoconnorhover/HotPotato" target="_blank" rel="noreferrer">⌘ View GitHub</a><a class="text-link light-link" href="https://github.com/harrisonoconnorhover/HotPotato#readme" target="_blank" rel="noreferrer">Read the docs ↗</a></div></div>
-        <div class="repo-card"><div class="repo-head"><img class="brand-mascot" src="./public/hot-potato-mascot-v2.png" alt="" /><strong>harrisonoconnorhover/HotPotato</strong><span>Public</span></div><div class="repo-description">Open-source inbound lead routing and scheduling infrastructure for GTM teams.</div><div class="repo-tags"><span>Open source</span><span>Self-hosted</span><span>Versioned rules</span><span>Route logs</span></div><div class="repo-line"><code id="clone-command">git clone https://github.com/harrisonoconnorhover/HotPotato.git</code><button id="copy-command" type="button" aria-label="Copy clone command" title="Copy clone command">⌘</button></div><div class="repo-stats"><span>⌘ Open source</span><span>✓ MIT licensed</span></div></div>
+        <div class="open-copy"><div class="section-kicker light">OPEN SOURCE BY DEFAULT</div><h2>Trust the router?<br>Read the router.</h2><p>Explore the application source, read the setup instructions, and inspect its current scope. The routing engine and application are licensed under AGPL-3.0-only.</p><div class="open-actions"><a class="button button-light" href="https://github.com/harrisonoconnorhover/hot-potato" target="_blank" rel="noopener noreferrer">⌘ View GitHub</a><a class="text-link light-link" href="https://github.com/harrisonoconnorhover/hot-potato#readme" target="_blank" rel="noopener noreferrer">Read the docs ↗</a></div></div>
+        <div class="repo-card"><div class="repo-head"><img class="brand-mascot" src="./public/hot-potato-mascot-v2.png" alt="" /><strong>harrisonoconnorhover/hot-potato</strong><span>Public</span></div><div class="repo-description">Open-source inbound lead routing and scheduling infrastructure for GTM teams.</div><div class="repo-tags"><span>Open source</span><span>Self-hosted</span><span>Versioned rules</span><span>Route logs</span></div><div class="repo-line"><code id="clone-command">git clone https://github.com/harrisonoconnorhover/hot-potato.git</code><button id="copy-command" type="button" aria-label="Copy clone command" title="Copy clone command">⌘</button></div><div class="repo-stats"><span>⌘ Open source</span><span>AGPL-3.0-only</span></div></div>
       </div>
     </section>
 
-    <section class="final-cta container"><div class="final-potato"><img class="final-mascot" src="./public/hot-potato-mascot-v2.png" alt="" /></div><div class="section-kicker">READY WHEN THE LEAD IS</div><h2>Catch the next one.</h2><p>Your form already did its job. Hot Potato handles what happens next.</p><div class="hero-actions centered"><a class="button button-fire" href="#demo">Try the live router →</a><a class="button button-ghost" href="https://github.com/harrisonoconnorhover/HotPotato" target="_blank" rel="noreferrer">⌘ GitHub</a></div></section>
+    <section class="final-cta container"><div class="final-potato"><img class="final-mascot" src="./public/hot-potato-mascot-v2.png" alt="" /></div><div class="section-kicker">EXPLORE THE PROJECT</div><h2>Read it. Run it. Inspect it.</h2><p>Start with the example, then explore the application and its setup requirements.</p><div class="hero-actions centered"><a class="button button-fire" href="#demo">Explore the example →</a><a class="button button-ghost" href="https://github.com/harrisonoconnorhover/hot-potato" target="_blank" rel="noopener noreferrer">⌘ GitHub</a></div></section>
   </main>
 
   <footer>
     <div class="container footer-grid">
       <div class="footer-brand"><a class="brand" href="#top"><img class="brand-mascot" src="./public/hot-potato-mascot-v2.png" alt="" /><span>HOT POTATO</span></a><p>Lead routing without flowchart hell.</p><span>© 2026 Hot Potato.</span></div>
-      <div><strong>Product</strong><a href="#product">Overview</a><a href="#how">How it works</a><a href="#integrations">Integrations</a><a href="#pricing">Pricing</a></div>
-      <div><strong>Developers</strong><a href="https://github.com/harrisonoconnorhover/HotPotato#readme" target="_blank" rel="noreferrer">Project brief</a><a href="https://github.com/harrisonoconnorhover/HotPotato" target="_blank" rel="noreferrer">GitHub</a><a href="https://github.com/harrisonoconnorhover/HotPotato/blob/main/ROADMAP.md" target="_blank" rel="noreferrer">Roadmap</a><a href="https://github.com/harrisonoconnorhover/HotPotato/blob/main/LICENSE" target="_blank" rel="noreferrer">MIT license</a></div>
-      <div><strong>Project</strong><a href="https://github.com/harrisonoconnorhover/HotPotato/discussions" target="_blank" rel="noreferrer">Discussions</a><a href="https://github.com/harrisonoconnorhover/HotPotato/issues" target="_blank" rel="noreferrer">Issues</a><a href="https://github.com/harrisonoconnorhover/HotPotato/blob/main/CONTRIBUTING.md" target="_blank" rel="noreferrer">Contributing</a><a href="https://github.com/harrisonoconnorhover/HotPotato/blob/main/SECURITY.md" target="_blank" rel="noreferrer">Security</a></div>
+      <div><strong>Product</strong><a href="#product">Overview</a><a href="#how">How it works</a><a href="#status">Project status</a></div>
+      <div><strong>Developers</strong><a href="https://github.com/harrisonoconnorhover/hot-potato#readme" target="_blank" rel="noopener noreferrer">Project brief</a><a href="https://github.com/harrisonoconnorhover/hot-potato" target="_blank" rel="noopener noreferrer">GitHub</a><a href="https://github.com/harrisonoconnorhover/hot-potato#readme" target="_blank" rel="noopener noreferrer">Current scope</a><a href="https://github.com/harrisonoconnorhover/hot-potato/blob/main/LICENSE" target="_blank" rel="noopener noreferrer">Application license</a></div>
+      <div><strong>Project</strong><a href="https://github.com/harrisonoconnorhover/hot-potato/issues" target="_blank" rel="noopener noreferrer">Issues</a><a href="https://github.com/harrisonoconnorhover/hot-potato/blob/main/CONTRIBUTING.md" target="_blank" rel="noopener noreferrer">Contributing</a><a href="https://github.com/harrisonoconnorhover/hot-potato/blob/main/SECURITY.md" target="_blank" rel="noopener noreferrer">Security</a></div>
     </div>
     <div class="footer-wordmark">HOT POTATO<span>◆</span></div>
   </footer>

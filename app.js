@@ -50,7 +50,7 @@ $('run-route').addEventListener('click', () => {
   btn.setAttribute('aria-busy', 'true');
   steps.forEach((step, i) => { step.classList.remove('active'); step.querySelector('.step-check').textContent = i + 1; });
   result.classList.remove('shown'); meeting.classList.remove('shown');
-  $('route-time').textContent = 'RUNNING…'; btn.textContent = 'Routing…';
+  $('route-time').textContent = 'PLAYING…'; btn.textContent = 'Playing…';
   let i = 0;
   const stepDelay = window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 80 : 360;
   const timer = setInterval(() => {
@@ -62,8 +62,8 @@ $('run-route').addEventListener('click', () => {
     if (i >= steps.length) {
       clearInterval(timer);
       setTimeout(() => {
-        $('route-time').textContent = 'ROUTED';
-        btn.textContent = 'Run route again ⚡';
+        $('route-time').textContent = 'EXAMPLE COMPLETE';
+        btn.textContent = 'Replay example ⚡';
         btn.disabled = false;
         btn.removeAttribute('aria-busy');
         running = false;

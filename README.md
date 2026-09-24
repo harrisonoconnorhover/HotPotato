@@ -1,25 +1,14 @@
-# Hot Potato
+# Hot Potato marketing site
 
-Hot Potato is an open-source inbound lead-routing product for GTM teams that want readable rules, explainable decisions, and infrastructure they can own.
+This repository contains Hot Potato's static website. The [application repository](https://github.com/harrisonoconnorhover/hot-potato) contains the routing engine, setup instructions, and current capabilities. Hot Potato is in active development.
 
 **Live site:** [hot-potato-32c.pages.dev](https://hot-potato-32c.pages.dev/)
 
-## How it works
+## What the example does
 
-The route is deliberately simple:
+The interactive example reveals preset fictional leads, assignments, and times. It does not connect to a CRM, check calendar availability, or book meetings. The rule sketch is illustrative pseudocode, not the application's executable rule format.
 
-```text
-lead arrives → rules run → right rep → available time → CRM is updated
-```
-
-The project is guided by four principles:
-
-- Routing logic should be readable without a flowchart certification.
-- Every decision should be explainable and tied to a rule version.
-- The core should be self-hostable and useful without a managed plan.
-- Integrations should ship from real workflow demand, not logo-wall theater.
-
-See [ROADMAP.md](./ROADMAP.md) for the delivery order.
+The site does not advertise hosted plans, support tiers, or unqualified integrations. Refer visitors to the application documentation for supported workflows, setup requirements, and limits. [ROADMAP.md](./ROADMAP.md) is this site's historical plan, not a current application feature contract.
 
 ## Run the site locally
 
@@ -36,14 +25,17 @@ Open `http://localhost:8000`.
 The production site is hosted on Cloudflare Pages. It is a static deployment with no install or build command.
 
 ```bash
-wrangler pages deploy . --project-name hot-potato --branch main
+site_stage="$(mktemp -d)"
+cp index.html styles.css app.js "$site_stage/"
+cp -R public "$site_stage/public"
+wrangler pages deploy "$site_stage" --project-name hot-potato --branch main
 ```
 
 ## Repository map
 
 - `index.html` — product story and interface mockups
 - `styles.css` — responsive visual system
-- `app.js` — mobile navigation and interactive router demo
+- `app.js` — mobile navigation and simulated routing example
 - `public/` — mascot and social-preview image
 - `ROADMAP.md` — staged product plan
 - `CONTRIBUTING.md` — contribution workflow
@@ -55,4 +47,4 @@ Ideas, workflow examples, and focused pull requests are welcome. Please read [CO
 
 ## License
 
-[MIT](./LICENSE) © 2026 Harrison O'Connor-Hoover
+This website's source is [MIT](./LICENSE) © 2026 Harrison O'Connor-Hoover. The separate [Hot Potato application is AGPL-3.0-only](https://github.com/harrisonoconnorhover/hot-potato/blob/main/LICENSE); the website's license does not apply to that application.
