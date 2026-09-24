@@ -2,38 +2,35 @@
 
 ## Finished
 
-- Corrected the Integrations navigation target and replaced misleading card chevrons with honest informational tiles.
-- Rebalanced the capability cards into a deliberate two-by-two desktop grid.
-- Changed the router to begin ready but unrouted, then reveal each rule and result after the user runs it.
-- Tightened the mobile proof line and replaced the off-brand purple focus treatment with the acid-green brand accent.
-- Published the refined site to `https://hot-potato-32c.pages.dev/`.
+- Removed hosted pricing tiers, popularity badges, SSO/SAML and support promises, and the integration logo wall and tiles.
+- Labeled the interactive walkthrough as simulated, its outcomes as examples, and the rule sketch as pseudocode. Replaced broad guarantees with concrete application capabilities and development status.
+- Corrected product, setup, clone and license links to the actual application repository; distinguished its AGPL-3.0-only license from this website's MIT license.
+- Published source commit `752c38c` to [Hot Potato](https://hot-potato-32c.pages.dev/), deployment `44386019-456e-4fde-a3f2-e30bf132d674`.
 
 ## Try It
 
-- Open `https://hot-potato-32c.pages.dev/` on desktop and mobile.
-- Use the Integrations navigation, run the router, load another lead, and open the mobile menu.
+Open [the example](https://hot-potato-32c.pages.dev/#demo), read the simulation note, then choose **Play example**. Use **Project status** to see the current availability and setup information.
 
 ## Checks
 
-- `node --check app.js` and HTML/navigation contract — passed.
-- Desktop visual QA at 1440×1000 — passed.
-- Mobile visual QA at 390×844 — passed with no horizontal overflow.
-- Router ready-to-routed interaction and mobile menu — passed with no console errors.
-- Cloudflare page and five deployed assets — HTTP 200 and exact source matches.
+- `node --check app.js` and `git diff --check` passed.
+- Focused HTML checks passed for removed claims, unique IDs, section links, local asset references, product destinations and JavaScript element references.
+- Desktop and 390px mobile visual checks passed, with no horizontal overflow. Example playback, alternate fictional lead, mobile menu, section navigation and keyboard navigation worked; no browser console errors were observed locally.
+- Five distinct application destinations returned HTTP 200. Cloudflare confirmed the production deployment and source commit; browser readback and visual inspection confirmed the corrected public page.
+- A direct Python fetch of the public page returned HTTP 403, so no byte-for-byte deployed-asset match is claimed. Public browser verification succeeded.
 
 ## Decisions
 
-- Keep integration tiles informational until real detail pages exist.
-- Use a balanced two-by-two feature grid while retaining the yellow audit-log emphasis.
-- Start the router in a visibly pending state so the primary interaction has an honest before-and-after.
+- Keep the playful design and illustrative walkthrough, with explicit boundaries around what they demonstrate.
+- Refer visitors to the actual application documentation for provider setup and current scope instead of advertising an unverified hosted service.
+- Publish only HTML, CSS, JavaScript and public images; no application or provider configuration changed.
 
 ## Remaining
 
-- Complete product and end-to-end workflow QA before connecting an official domain.
-- Complete product-name and domain diligence; `gethotpotato.com` belongs to an unrelated active product.
+- Qualify and record a real application workflow separately before making live integration or service-availability claims.
+- Product-name/domain diligence remains separate; `gethotpotato.com` belongs to another active product.
 
 ## Review First
 
-- Integrations navigation and static tile treatment.
-- Pending and completed router states.
-- Capability-card rhythm at desktop and mobile widths.
+- The simulation note and project-status section on the public page.
+- Correct application links and licensing in the source section and footer.
