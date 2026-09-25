@@ -70,7 +70,7 @@
       <div class="section-kicker">01 / THE PRODUCT</div>
       <div class="section-heading split-heading">
         <h2>See an example<br>lead assignment.</h2>
-        <div><p>This walkthrough illustrates how company size, territory, and rep selection can shape an assignment.</p><a class="inline-link" href="#how">Read the rule sketch →</a></div>
+        <div><p>This walkthrough illustrates how company size, territory, and rep selection can shape an assignment.</p><a class="inline-link" href="#how">Inspect the routing rules →</a></div>
       </div>
 
       <div class="router-shell" id="demo">
@@ -116,19 +116,18 @@
         <div class="section-kicker light">02 / HOW IT WORKS</div>
         <div class="section-heading split-heading light">
           <h2>Routing logic<br>you can actually read.</h2>
-          <p>The application supports conditional rules, existing-owner preference, and weighted assignment. This sketch illustrates the idea; the repository documents the actual rule format.</p>
+          <p>The public application matches ordered rules, preserves an eligible existing owner, and otherwise uses weighted assignment. The rule below comes from its routing tests.</p>
         </div>
         <div class="code-grid">
           <div class="code-card">
-            <div class="code-head"><span>⌘ Rule sketch</span><span class="code-status">PSEUDOCODE</span></div>
-            <pre><code><span class="c-muted">// enterprise inbound</span>
-<span class="c-purple">when</span>(lead.employees &gt;= <span class="c-yellow">500</span>)
-  .territory(lead.region)
-  .prefer(<span class="c-green">"account_owner"</span>)
-  .fallback(<span class="c-green">"weighted_round_robin"</span>)
-  .require(<span class="c-green">"calendar_available"</span>)
-  .route();</code></pre>
-            <div class="code-foot">Illustrative pseudocode · see the application for its rule format</div>
+            <div class="code-head"><span>⌘ Enterprise Northeast</span><span class="code-status">RULE CONDITIONS</span></div>
+            <pre><code>{
+  <span class="c-green">"company.employee_count"</span>: { <span class="c-purple">"gte"</span>: <span class="c-yellow">500</span> },
+  <span class="c-green">"company.state"</span>: {
+    <span class="c-purple">"in"</span>: [<span class="c-green">"NY", "NJ", "PA", "MA"</span>]
+  }
+}</code></pre>
+            <div class="code-foot">From <a href="https://github.com/harrisonoconnorhover/hot-potato/blob/8bd272ec94a742feed90491bff717e985fddabf6/packages/router/test/router.test.ts#L38-L47" target="_blank" rel="noopener noreferrer">the public routing tests ↗</a></div>
           </div>
           <div class="explain-card">
             <div class="explain-top">✦ <span>EXAMPLE EXPLANATION</span></div>
@@ -140,29 +139,36 @@
               <div><span>✓</span> <span><b id="explain-owner-priority">Jamie</b> had the highest weighted priority</span></div>
               <div><span>✓</span> <span><b id="explain-owner-calendar">Jamie</b> was available at the requested time</span></div>
             </div>
-            <div class="audit-note">Fictional example. The application stores routing decisions with their rule version.</div>
+            <div class="audit-note">Fictional example. Saved decisions identify the matched rule, assigned rep, and assignment reason. They do not preserve a historical rule snapshot.</div>
           </div>
+        </div>
+        <div class="evidence-note" id="evidence">
+          <h3>One routing decision, with evidence.</h3>
+          <p>The design problem: assign a qualified lead once, respect an eligible existing owner, and return a clear failure when no one can take it. Matching and rep selection are separate from the database and provider calls, so the core decision can be checked with fixed inputs.</p>
+          <p>In the public tests, a fictional 900-person New York company arrives Monday at 12:00 UTC. Ada and Marcus each have two assignments; their weights are 2:1, so Ada is selected. Set Marcus as the existing owner and Marcus is preserved. Mark Ada busy and Marcus is selected. On Sunday, outside both reps’ schedules, the same lead returns <code>NoEligibleRepError</code>.</p>
+          <p><a href="https://github.com/harrisonoconnorhover/hot-potato/blob/8bd272ec94a742feed90491bff717e985fddabf6/packages/router/src/router.ts" target="_blank" rel="noopener noreferrer">Read the routing function ↗</a> · <a href="https://github.com/harrisonoconnorhover/hot-potato/blob/8bd272ec94a742feed90491bff717e985fddabf6/packages/router/test/router.test.ts" target="_blank" rel="noopener noreferrer">Inspect inputs and assertions ↗</a> · <a href="https://github.com/harrisonoconnorhover/hot-potato/blob/8bd272ec94a742feed90491bff717e985fddabf6/packages/db/src/integration-smoke.ts" target="_blank" rel="noopener noreferrer">Inspect the duplicate-request check ↗</a> · <a href="https://github.com/harrisonoconnorhover/hot-potato/actions/runs/32709756616" target="_blank" rel="noopener noreferrer">View this version’s CI result ↗</a></p>
+          <p class="evidence-limit">Evidence is pinned to public source <code>8bd272e</code>. These are synthetic routing tests, not measured customer results or proof of a connected CRM or calendar. The animation above remains a separate preset illustration.</p>
         </div>
       </div>
     </section>
 
     <section class="capabilities container">
-      <div class="section-kicker">03 / IN THE APPLICATION</div>
-      <div class="section-heading split-heading"><h2>Rules, scheduling,<br>and decision history.</h2><p>Inspect the implementation and setup requirements in the repository. The illustrations below use fictional records.</p></div>
+      <div class="section-kicker">03 / IN THE PUBLIC APPLICATION</div>
+      <div class="section-heading split-heading"><h2>Rules, availability,<br>and saved assignments.</h2><p>These capabilities are available in the linked public source. The illustrations below use fictional records.</p></div>
       <div class="feature-grid">
         <article class="feature-card feature-large"><span class="feature-icon">↗</span><span class="feature-number">01</span><h3>Define assignment rules</h3><p>Match lead fields to ordered rules, preserve a valid existing owner, and choose an eligible rep using weighted assignment.</p><div class="mini-tags"><span>CRM owner</span><span>Territory</span><span>Company size</span><span>Availability</span></div></article>
-        <article class="feature-card"><span class="feature-icon">◷</span><span class="feature-number">02</span><h3>Configure scheduling</h3><p>Set meeting types, working hours, and booking limits in the application. Calendar actions require configured provider connections.</p><div class="calendar-mini"><span>9:30</span><span>10:00</span><b>10:30</b><span>11:30</span></div></article>
-        <article class="feature-card"><span class="feature-icon">DB</span><span class="feature-number">03</span><h3>Keep the decision</h3><p>Persist the assignment and its rule version. Request IDs let a repeated request reuse its existing result.</p><div class="sync-mini"><span>Hot Potato</span><b>→</b><strong>Decision history</strong></div></article>
-        <article class="feature-card feature-accent"><span class="feature-icon">◈</span><span class="feature-number">04</span><h3>Explain the route</h3><p>Inspect rule and rep traces to understand an assignment. Review saved decisions when a route needs investigation.</p><div class="log-mini"><span>18:04:11</span><strong>Maya Chen → Jamie R.</strong><em>5 rules passed</em><span>18:03:54</span><strong>Andre Mills → Morgan T.</strong><em>4 rules passed</em><span>18:03:21</span><strong>Priya Rao → Alex K.</strong><em>5 rules passed</em></div></article>
+        <article class="feature-card"><span class="feature-icon">◷</span><span class="feature-number">02</span><h3>Check rep availability</h3><p>Filter reps by weekly schedules. Google free/busy checks require a configured connection; this public version does not book meetings.</p><div class="calendar-mini"><span>9:30</span><span>10:00</span><b>10:30</b><span>11:30</span></div></article>
+        <article class="feature-card"><span class="feature-icon">DB</span><span class="feature-number">03</span><h3>Keep the decision</h3><p>Persist the selected rep, matched rule ID, and assignment reason. A repeated request ID returns its existing decision.</p><div class="sync-mini"><span>Hot Potato</span><b>→</b><strong>Decision history</strong></div></article>
+        <article class="feature-card feature-accent"><span class="feature-icon">◈</span><span class="feature-number">04</span><h3>Review the assignment</h3><p>The operator view shows the selected rep, matched rule name, and CRM writeback status.</p><div class="log-mini"><span>18:04:11</span><strong>Maya Chen → Jamie R.</strong><em>Rule matched</em><span>18:03:54</span><strong>Andre Mills → Morgan T.</strong><em>Owner preserved</em><span>18:03:21</span><strong>Priya Rao → Alex K.</strong><em>Rule matched</em></div></article>
       </div>
     </section>
 
     <section class="status-section" id="status">
       <div class="container status-layout">
-        <div><div class="section-kicker">04 / PROJECT STATUS</div><h2>Open source.<br>In development.</h2><p>Hot Potato is software you run and configure yourself. This site offers a simulated example and links to the application.</p></div>
+        <div><div class="section-kicker">04 / PROJECT STATUS</div><h2>Open source.<br>In development.</h2><p>Hot Potato is software you run and configure yourself. This site offers a preset illustration and an inspectable routing case from the public application.</p></div>
         <div class="status-details">
-          <div><h3>Run it yourself</h3><p>Review the application setup instructions, current capabilities, and development limits before trying it in your own environment.</p></div>
-          <div><h3>Connect your own systems</h3><p>Calendar and CRM actions require provider configuration. Check the application documentation for supported workflows and their requirements.</p></div>
+          <div><h3>Run it yourself</h3><p>The linked public version covers lead assignment, saved decisions, Google availability checks, and queued HubSpot owner updates. Setup and provider credentials are required for external actions.</p></div>
+          <div><h3>Public scope</h3><p>Meeting booking, an editable routing studio, and detailed rule/rep previews exist only in later local development. They are not included in the public version linked here. Live provider operation has not been demonstrated by this website.</p></div>
           <a class="button button-dark" href="https://github.com/harrisonoconnorhover/hot-potato#readme" target="_blank" rel="noopener noreferrer">Read the application docs ↗</a>
         </div>
       </div>
@@ -171,7 +177,7 @@
     <section class="open-section" id="open">
       <div class="container open-card">
         <div class="open-copy"><div class="section-kicker light">OPEN SOURCE BY DEFAULT</div><h2>Trust the router?<br>Read the router.</h2><p>Explore the application source, read the setup instructions, and inspect its current scope. The routing engine and application are licensed under AGPL-3.0-only.</p><div class="open-actions"><a class="button button-light" href="https://github.com/harrisonoconnorhover/hot-potato" target="_blank" rel="noopener noreferrer">⌘ View GitHub</a><a class="text-link light-link" href="https://github.com/harrisonoconnorhover/hot-potato#readme" target="_blank" rel="noopener noreferrer">Read the docs ↗</a></div></div>
-        <div class="repo-card"><div class="repo-head"><img class="brand-mascot" src="./public/hot-potato-mascot-v2.png" alt="" /><strong>harrisonoconnorhover/hot-potato</strong><span>Public</span></div><div class="repo-description">Open-source inbound lead routing and scheduling infrastructure for GTM teams.</div><div class="repo-tags"><span>Open source</span><span>Self-hosted</span><span>Versioned rules</span><span>Route logs</span></div><div class="repo-line"><code id="clone-command">git clone https://github.com/harrisonoconnorhover/hot-potato.git</code><button id="copy-command" type="button" aria-label="Copy clone command" title="Copy clone command">⌘</button></div><div class="repo-stats"><span>⌘ Open source</span><span>AGPL-3.0-only</span></div></div>
+        <div class="repo-card"><div class="repo-head"><img class="brand-mascot" src="./public/hot-potato-mascot-v2.png" alt="" /><strong>harrisonoconnorhover/hot-potato</strong><span>Public</span></div><div class="repo-description">Open-source inbound lead routing for GTM teams.</div><div class="repo-tags"><span>Open source</span><span>Self-hosted</span><span>Ordered rules</span><span>Route logs</span></div><div class="repo-line"><code id="clone-command">git clone https://github.com/harrisonoconnorhover/hot-potato.git</code><button id="copy-command" type="button" aria-label="Copy clone command" title="Copy clone command">⌘</button></div><div class="repo-stats"><span>⌘ Open source</span><span>AGPL-3.0-only</span></div></div>
       </div>
     </section>
 

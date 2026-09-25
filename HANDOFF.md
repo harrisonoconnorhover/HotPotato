@@ -2,35 +2,37 @@
 
 ## Finished
 
-- Removed hosted pricing tiers, popularity badges, SSO/SAML and support promises, and the integration logo wall and tiles.
-- Labeled the interactive walkthrough as simulated, its outcomes as examples, and the rule sketch as pseudocode. Replaced broad guarantees with concrete application capabilities and development status.
-- Corrected product, setup, clone and license links to the actual application repository; distinguished its AGPL-3.0-only license from this website's MIT license.
-- Published source commit `752c38c` to [Hot Potato](https://hot-potato-32c.pages.dev/), deployment `44386019-456e-4fde-a3f2-e30bf132d674`.
+- Removed unsupported rule-version promises and public booking/editor/trace implications; capability cards now describe the published routing application.
+- Replaced illustrative pseudocode with actual rule conditions and added a concise synthetic routing case covering weighted assignment, owner preservation, busy-rep exclusion, and unavailable schedules.
+- Linked the case directly to public commit `8bd272e`, its routing function, assertions, duplicate-request check, and completed CI run.
+- Kept the preset animation explicit and distinguished public source from later unpublished local development.
 
 ## Try It
 
-Open [the example](https://hot-potato-32c.pages.dev/#demo), read the simulation note, then choose **Play example**. Use **Project status** to see the current availability and setup information.
+Run `python3 -m http.server 4177 --bind 127.0.0.1`, then open `http://127.0.0.1:4177/#how`. Inspect the case and its source links, play the example, and review **Project status**.
 
 ## Checks
 
 - `node --check app.js` and `git diff --check` passed.
-- Focused HTML checks passed for removed claims, unique IDs, section links, local asset references, product destinations and JavaScript element references.
-- Desktop and 390px mobile visual checks passed, with no horizontal overflow. Example playback, alternate fictional lead, mobile menu, section navigation and keyboard navigation worked; no browser console errors were observed locally.
-- Five distinct application destinations returned HTTP 200. Cloudflare confirmed the production deployment and source commit; browser readback and visual inspection confirmed the corrected public page.
-- A direct Python fetch of the public page returned HTTP 403, so no byte-for-byte deployed-asset match is claimed. Public browser verification succeeded.
+- Focused HTML checks passed: unique IDs, section destinations, local assets, JavaScript element references, valid JSON conditions, removed claims, and simulation/public-scope labels.
+- All four unique evidence destinations returned HTTP 200.
+- The exact public routing source at `8bd272e` was extracted to a temporary directory; its existing Vitest suite passed all 8 tests using the installed local test runtime. No database or provider calls were made.
+- `git ls-remote` confirmed public application `main` remains `8bd272e`; its GitHub CI run `32709756616` is completed/successful. Later local product tests do not establish public capabilities.
 
 ## Decisions
 
-- Keep the playful design and illustrative walkthrough, with explicit boundaries around what they demonstrate.
-- Refer visitors to the actual application documentation for provider setup and current scope instead of advertising an unverified hosted service.
-- Publish only HTML, CSS, JavaScript and public images; no application or provider configuration changed.
+- This is a copy, documentation, and presentation correction. No routing, booking, snapshot, or integration features were added.
+- Pin inspectable examples to an available public revision instead of publishing the 35-commit local application backlog.
+- The synthetic tests demonstrate correctness for their inputs, not customer impact or live provider operation.
 
 ## Remaining
 
-- Qualify and record a real application workflow separately before making live integration or service-availability claims.
-- Product-name/domain diligence remains separate; `gethotpotato.com` belongs to another active product.
+- Complete local desktop/mobile visual review before publishing.
+- Push and deploy this marketing-only change when the coordinating task is ready; this task has not published it.
+- A real provider workflow remains unverified by the website. Existing local product changes, including uncommitted Outlook work, are untouched.
 
 ## Review First
 
-- The simulation note and project-status section on the public page.
-- Correct application links and licensing in the source section and footer.
+- `index.html`: actual rule, evidence case, capability cards, and project status.
+- `README.md`: pinned evidence and published-scope boundary.
+- `styles.css`: evidence text readability.

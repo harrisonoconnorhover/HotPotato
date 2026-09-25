@@ -6,9 +6,15 @@ This repository contains Hot Potato's static website. The [application repositor
 
 ## What the example does
 
-The interactive example reveals preset fictional leads, assignments, and times. It does not connect to a CRM, check calendar availability, or book meetings. The rule sketch is illustrative pseudocode, not the application's executable rule format.
+The interactive example reveals preset fictional leads, assignments, and times. It does not connect to a CRM, check calendar availability, or book meetings. The rule excerpt and accompanying case study come from the application's public routing tests; the animation remains a separate preset illustration.
 
 The site does not advertise hosted plans, support tiers, or unqualified integrations. Refer visitors to the application documentation for supported workflows, setup requirements, and limits. [ROADMAP.md](./ROADMAP.md) is this site's historical plan, not a current application feature contract.
+
+## Public evidence and scope
+
+The website’s routing case and capabilities are pinned to public application commit [`8bd272e`](https://github.com/harrisonoconnorhover/hot-potato/blob/8bd272ec94a742feed90491bff717e985fddabf6/README.md), verified as public `main` on September 25, 2026. The case links directly to the routing function, input fixtures and assertions, duplicate-request integration check, and that commit’s completed CI run.
+
+Keep capabilities aligned with the published application. Later local booking, routing-editor, and preview work is not included in this public version. Routing decisions identify a matched rule but do not preserve its historical configuration. The synthetic case demonstrates routing behavior, not customer adoption, revenue impact, or a live provider connection.
 
 ## Run the site locally
 
