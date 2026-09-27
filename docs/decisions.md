@@ -10,3 +10,5 @@
 - Product, setup, and application-license links use `harrisonoconnorhover/hot-potato`. This `HotPotato` repository is the separately MIT-licensed marketing site; the application is AGPL-3.0-only.
 
 - September 25, 2026: scope public capability claims to published application commit `8bd272e`, not the unpublished local backlog. Replace the earlier pseudocode with actual rule conditions and link the synthetic input/outcome case to that commit’s source, assertions, and CI. Saved rule IDs do not justify historical rule-version claims.
+
+- September 27, 2026: loading another preset resets playback to Ready, removes completed checkmarks and dims the example results until played. Disable switching while playback runs and announce its status. A new fictional input must not inherit the previous example's completed state.

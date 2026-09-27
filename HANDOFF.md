@@ -6,7 +6,7 @@
 - Replaced illustrative pseudocode with actual rule conditions and added a concise synthetic routing case covering weighted assignment, owner preservation, busy-rep exclusion, and unavailable schedules.
 - Linked the case directly to public commit `8bd272e`, its routing function, assertions, duplicate-request check, and completed CI run.
 - Kept the preset animation explicit and distinguished public source from later unpublished local development.
-- Published marketing source `efca4a0` to [Hot Potato](https://hot-potato-32c.pages.dev/), deployment [0a703609](https://0a703609.hot-potato-32c.pages.dev).
+- September 27 correction resets completion labels, step checkmarks and result emphasis when loading another example. Switching is disabled during playback; its status is announced accessibly.
 
 ## Try It
 
@@ -15,6 +15,7 @@ Open [the published routing case](https://hot-potato-32c.pages.dev/#how). Inspec
 ## Checks
 
 - `node --check app.js` and `git diff --check` passed.
+- September 27 browser repro: the old site kept “Example complete” after changing leads. Local correction verified playback, disabled switching, completion, then a new lead with Ready, five numbered steps, zero active steps and no emphasized results.
 - Focused HTML checks passed: unique IDs, section destinations, local assets, JavaScript element references, valid JSON conditions, removed claims, and simulation/public-scope labels.
 - All four unique evidence destinations returned HTTP 200. After deployment, canonical HTML returned HTTP 200 and byte-matched reviewed `index.html`, including the synthetic case, four evidence destinations, explicit preset label, public-scope limits, and removed rule-version promises.
 - Desktop and 390px mobile browser checks passed for the revised evidence, example playback, menu, and page width.
@@ -29,7 +30,7 @@ Open [the published routing case](https://hot-potato-32c.pages.dev/#how). Inspec
 
 ## Remaining
 
-- A real provider workflow remains unverified by the website. Existing local product changes, including uncommitted Outlook work, are untouched.
+- Publish and verify the September 27 playback-state correction. A real provider workflow remains unverified by the website; unrelated local product work is untouched.
 
 ## Review First
 

@@ -7,6 +7,17 @@ let leadIndex = 0;
 let running = false;
 const $ = (id) => document.getElementById(id);
 
+function resetPlayback() {
+  document.querySelectorAll('.rule-step').forEach((step, i) => {
+    step.classList.remove('active');
+    step.querySelector('.step-check').textContent = i + 1;
+  });
+  $('route-result').classList.remove('shown');
+  $('meeting-card').classList.remove('shown');
+  $('route-time').textContent = 'READY';
+  $('run-route').textContent = 'Play example ⚡';
+}
+
 function renderLead() {
   const lead = leads[leadIndex];
   $('lead-avatar').textContent = lead.name.split(' ').map(n => n[0]).join('');
@@ -31,6 +42,7 @@ function renderLead() {
   $('explain-reps').textContent = lead.reps;
   $('explain-owner-priority').textContent = lead.ownerFirst;
   $('explain-owner-calendar').textContent = lead.ownerFirst;
+  resetPlayback();
 }
 
 $('next-lead').addEventListener('click', () => {
@@ -46,10 +58,10 @@ $('run-route').addEventListener('click', () => {
   const steps = [...document.querySelectorAll('.rule-step')];
   const result = $('route-result');
   const meeting = $('meeting-card');
+  resetPlayback();
   btn.disabled = true;
+  $('next-lead').disabled = true;
   btn.setAttribute('aria-busy', 'true');
-  steps.forEach((step, i) => { step.classList.remove('active'); step.querySelector('.step-check').textContent = i + 1; });
-  result.classList.remove('shown'); meeting.classList.remove('shown');
   $('route-time').textContent = 'PLAYING…'; btn.textContent = 'Playing…';
   let i = 0;
   const stepDelay = window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 80 : 360;
@@ -65,6 +77,7 @@ $('run-route').addEventListener('click', () => {
         $('route-time').textContent = 'EXAMPLE COMPLETE';
         btn.textContent = 'Replay example ⚡';
         btn.disabled = false;
+        $('next-lead').disabled = false;
         btn.removeAttribute('aria-busy');
         running = false;
       }, stepDelay);
