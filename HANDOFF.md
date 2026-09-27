@@ -2,38 +2,39 @@
 
 ## Finished
 
-- Removed unsupported rule-version promises and public booking/editor/trace implications; capability cards now describe the published routing application.
-- Replaced illustrative pseudocode with actual rule conditions and added a concise synthetic routing case covering weighted assignment, owner preservation, busy-rep exclusion, and unavailable schedules.
-- Linked the case directly to public commit `8bd272e`, its routing function, assertions, duplicate-request check, and completed CI run.
-- Kept the preset animation explicit and distinguished public source from later unpublished local development.
-- September 27 correction resets completion labels, step checkmarks and result emphasis when loading another example. Switching is disabled during playback; its status is announced accessibly.
+- Public capabilities and routing examples are pinned to application source `03916c4`; unsupported booking and historical-rule-version claims remain removed.
+- The case links to actual routing inputs/assertions and the passing PostgreSQL retry/concurrency checks.
+- Added the concrete stale-owner retry failure and correction, explicitly using synthetic provider callbacks.
+- Loading another preset now clears prior completion/checkmarks/result emphasis. Switching is disabled during playback and status is announced accessibly.
+- Playback source `b6625c4` is deployed as `69a41354`. Publication of the updated evidence links is pending.
 
 ## Try It
 
-Open [the published routing case](https://hot-potato-32c.pages.dev/#how). Inspect its source links, play the preset example, and review **Project status**. For a local preview, run `python3 -m http.server 4177 --bind 127.0.0.1`.
+Open [the routing case](https://hot-potato-32c.pages.dev/#how), follow its source and CI links, then play the preset example and load another. The new example should return to Ready with numbered steps.
+
+Local preview: `python3 -m http.server 4197 --bind 127.0.0.1`.
 
 ## Checks
 
-- `node --check app.js` and `git diff --check` passed.
-- September 27 browser repro: the old site kept “Example complete” after changing leads. Local correction verified playback, disabled switching, completion, then a new lead with Ready, five numbered steps, zero active steps and no emphasized results.
-- Focused HTML checks passed: unique IDs, section destinations, local assets, JavaScript element references, valid JSON conditions, removed claims, and simulation/public-scope labels.
-- All four unique evidence destinations returned HTTP 200. After deployment, canonical HTML returned HTTP 200 and byte-matched reviewed `index.html`, including the synthetic case, four evidence destinations, explicit preset label, public-scope limits, and removed rule-version promises.
-- Desktop and 390px mobile browser checks passed for the revised evidence, example playback, menu, and page width.
-- The exact public routing source at `8bd272e` was extracted to a temporary directory; its existing Vitest suite passed all 8 tests using the installed local test runtime. No database or provider calls were made.
-- `git ls-remote` confirmed public application `main` remains `8bd272e`; its GitHub CI run `32709756616` is completed/successful. Later local product tests do not establish public capabilities.
+- `node --check app.js`, focused HTML/link checks and `git diff --check` passed.
+- Reproduced the previous stale completion state. Local and published playback→change-example checks now show Ready, five numbered steps, zero active steps and no emphasized results.
+- Deployed playback HTML, JavaScript and CSS byte-matched the reviewed files.
+- Application source `03916c4` passed [CI](https://github.com/harrisonoconnorhover/hot-potato/actions/runs/36334701962): 20 tests, formatting, typecheck, production build, disposable PostgreSQL setup and retry/concurrency smoke.
+- September 25 desktop/mobile visual checks remain historical; no new visual redesign was made.
 
 ## Decisions
 
-- This is a copy, documentation, and presentation correction. No routing, booking, snapshot, or integration features were added.
-- Pin inspectable examples to an available public revision instead of publishing the 35-commit local application backlog.
-- The synthetic tests demonstrate correctness for their inputs, not customer impact or live provider operation.
+- Keep preset playback clearly distinct from actual routing and database tests.
+- Link public, tested source without publishing unrelated local product work.
+- Correct existing state behavior and expose a real failure case; add no product features.
 
 ## Remaining
 
-- Publish and verify the September 27 playback-state correction. A real provider workflow remains unverified by the website; unrelated local product work is untouched.
+- Publish and verify the updated retry evidence and source links.
+- Live provider operation remains unverified by this website; no CRM/calendar actions were performed.
 
 ## Review First
 
-- `index.html`: actual rule, evidence case, capability cards, and project status.
-- `README.md`: pinned evidence and published-scope boundary.
-- `styles.css`: evidence text readability.
+- `app.js`: playback reset and disabled switching.
+- `index.html`: retry case and pinned evidence destinations.
+- `README.md`: public source boundary.

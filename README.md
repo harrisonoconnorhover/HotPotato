@@ -12,7 +12,7 @@ The site does not advertise hosted plans, support tiers, or unqualified integrat
 
 ## Public evidence and scope
 
-The website’s routing case and capabilities are pinned to public application commit [`8bd272e`](https://github.com/harrisonoconnorhover/hot-potato/blob/8bd272ec94a742feed90491bff717e985fddabf6/README.md), verified as public `main` on September 25, 2026. The case links directly to the routing function, input fixtures and assertions, duplicate-request integration check, and that commit’s completed CI run.
+The website’s routing case and capabilities are pinned to public application commit [`03916c4`](https://github.com/harrisonoconnorhover/hot-potato/blob/03916c4a5dff64fa097b57df481ce8fc77186759/README.md), verified as public `main` on September 27, 2026. The case links directly to the routing function, input fixtures and assertions, duplicate-request integration check, and that commit’s completed CI run.
 
 Keep capabilities aligned with the published application. Later local booking, routing-editor, and preview work is not included in this public version. Routing decisions identify a matched rule but do not preserve its historical configuration. The synthetic case demonstrates routing behavior, not customer adoption, revenue impact, or a live provider connection.
 

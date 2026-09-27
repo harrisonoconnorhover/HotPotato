@@ -127,7 +127,7 @@
     <span class="c-purple">"in"</span>: [<span class="c-green">"NY", "NJ", "PA", "MA"</span>]
   }
 }</code></pre>
-            <div class="code-foot">From <a href="https://github.com/harrisonoconnorhover/hot-potato/blob/8bd272ec94a742feed90491bff717e985fddabf6/packages/router/test/router.test.ts#L38-L47" target="_blank" rel="noopener noreferrer">the public routing tests ↗</a></div>
+            <div class="code-foot">From <a href="https://github.com/harrisonoconnorhover/hot-potato/blob/03916c4a5dff64fa097b57df481ce8fc77186759/packages/router/test/router.test.ts#L38-L47" target="_blank" rel="noopener noreferrer">the public routing tests ↗</a></div>
           </div>
           <div class="explain-card">
             <div class="explain-top">✦ <span>EXAMPLE EXPLANATION</span></div>
@@ -146,8 +146,9 @@
           <h3>One routing decision, with evidence.</h3>
           <p>The design problem: assign a qualified lead once, respect an eligible existing owner, and return a clear failure when no one can take it. Matching and rep selection are separate from the database and provider calls, so the core decision can be checked with fixed inputs.</p>
           <p>In the public tests, a fictional 900-person New York company arrives Monday at 12:00 UTC. Ada and Marcus each have two assignments; their weights are 2:1, so Ada is selected. Set Marcus as the existing owner and Marcus is preserved. Mark Ada busy and Marcus is selected. On Sunday, outside both reps’ schedules, the same lead returns <code>NoEligibleRepError</code>.</p>
-          <p><a href="https://github.com/harrisonoconnorhover/hot-potato/blob/8bd272ec94a742feed90491bff717e985fddabf6/packages/router/src/router.ts" target="_blank" rel="noopener noreferrer">Read the routing function ↗</a> · <a href="https://github.com/harrisonoconnorhover/hot-potato/blob/8bd272ec94a742feed90491bff717e985fddabf6/packages/router/test/router.test.ts" target="_blank" rel="noopener noreferrer">Inspect inputs and assertions ↗</a> · <a href="https://github.com/harrisonoconnorhover/hot-potato/blob/8bd272ec94a742feed90491bff717e985fddabf6/packages/db/src/integration-smoke.ts" target="_blank" rel="noopener noreferrer">Inspect the duplicate-request check ↗</a> · <a href="https://github.com/harrisonoconnorhover/hot-potato/actions/runs/32709756616" target="_blank" rel="noopener noreferrer">View this version’s CI result ↗</a></p>
-          <p class="evidence-limit">Evidence is pinned to public source <code>8bd272e</code>. These are synthetic routing tests, not measured customer results or proof of a connected CRM or calendar. The animation above remains a separate preset illustration.</p>
+          <p><a href="https://github.com/harrisonoconnorhover/hot-potato/blob/03916c4a5dff64fa097b57df481ce8fc77186759/packages/router/src/router.ts" target="_blank" rel="noopener noreferrer">Read the routing function ↗</a> · <a href="https://github.com/harrisonoconnorhover/hot-potato/blob/03916c4a5dff64fa097b57df481ce8fc77186759/packages/router/test/router.test.ts" target="_blank" rel="noopener noreferrer">Inspect inputs and assertions ↗</a> · <a href="https://github.com/harrisonoconnorhover/hot-potato/blob/03916c4a5dff64fa097b57df481ce8fc77186759/packages/db/src/integration-smoke.ts" target="_blank" rel="noopener noreferrer">Inspect retry and duplicate-request checks ↗</a> · <a href="https://github.com/harrisonoconnorhover/hot-potato/actions/runs/36334701962" target="_blank" rel="noopener noreferrer">View this version’s CI result ↗</a></p>
+          <p>The retry failure case: an older owner update fails, a newer assignment succeeds, and the old retry must not undo it. The database check verifies that obsolete work becomes <code>superseded</code> without calling the CRM, and that concurrent owner writes finish in order. These checks use synthetic provider callbacks.</p>
+          <p class="evidence-limit">Evidence is pinned to public source <code>03916c4</code>. These are synthetic routing tests, not measured customer results or proof of a connected CRM or calendar. The animation above remains a separate preset illustration.</p>
         </div>
       </div>
     </section>
